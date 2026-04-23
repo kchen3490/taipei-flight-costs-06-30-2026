@@ -1,0 +1,143 @@
+body {
+  background: #f8f9fa;
+  font-family: system-ui, -apple-system, sans-serif;
+}
+
+.container {
+  max-width: 1100px;
+  padding-top: 2rem;
+  padding-bottom: 3rem;
+}
+
+/* ── Visualization wrapper ───────────────────────────────────────── */
+#vis {
+  background: #ffffff;
+  border: 1px solid #dee2e6;
+  border-radius: 8px;
+  padding: 1rem;
+  overflow-x: auto;
+}
+
+#vis svg {
+  display: block;
+  margin: 0 auto;
+}
+
+/* ── Bars ────────────────────────────────────────────────────────── */
+.bar {
+  cursor: pointer;
+  transition: opacity 0.15s;
+}
+
+.bar:hover {
+  opacity: 0.75;
+}
+
+/* ── Axes ────────────────────────────────────────────────────────── */
+.axis text {
+  font-size: 12px;
+  fill: #495057;
+}
+
+.axis path,
+.axis line {
+  stroke: #ced4da;
+}
+
+.axis--x .tick text {
+  text-anchor: end;
+}
+
+/* ── Grid lines ──────────────────────────────────────────────────── */
+.grid line {
+  stroke: #e9ecef;
+  stroke-dasharray: 3 3;
+}
+
+.grid path {
+  stroke: none;
+}
+
+/* ── Tooltip ─────────────────────────────────────────────────────── */
+#tooltip {
+  position: fixed;
+  pointer-events: none;
+  background: rgba(33, 37, 41, 0.92);
+  color: #f8f9fa;
+  border-radius: 6px;
+  padding: 8px 12px;
+  font-size: 13px;
+  line-height: 1.5;
+  max-width: 240px;
+  opacity: 0;
+  transition: opacity 0.12s;
+  z-index: 9999;
+}
+
+#tooltip.visible {
+  opacity: 1;
+}
+
+#tooltip .tt-route {
+  font-weight: 600;
+  margin-bottom: 2px;
+}
+
+#tooltip .tt-airline {
+  font-size: 12px;
+  color: #ced4da;
+}
+
+#tooltip .tt-type {
+  font-size: 11px;
+  color: #adb5bd;
+  margin-bottom: 3px;
+}
+
+#tooltip .tt-price {
+  font-size: 15px;
+  font-weight: 700;
+  color: #74c0fc;
+}
+
+#tooltip .tt-sub {
+  font-size: 11px;
+  color: #adb5bd;
+}
+
+#tooltip .tt-meta {
+  font-size: 11px;
+  color: #ced4da;
+}
+
+#tooltip .tt-spark-label {
+  font-size: 10px;
+  color: #6c757d;
+  margin-top: 6px;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+#tooltip .tt-link {
+  font-size: 11px;
+  color: #74c0fc;
+  margin-top: 6px;
+  opacity: 0.85;
+}
+
+/* ── Panel titles ────────────────────────────────────────────────── */
+.panel-title {
+  font-size: 13px;
+  font-weight: 600;
+  fill: #343a40;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+}
+
+/* ── Empty state ─────────────────────────────────────────────────── */
+.empty-msg {
+  text-anchor: middle;
+  dominant-baseline: middle;
+  fill: #adb5bd;
+  font-size: 14px;
+}
